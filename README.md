@@ -81,3 +81,7 @@ cat site.conf | nginxcheck -
 - Includes with variables are not expanded; includes outside `--root` are not read; only `http`, `stream` and `mail` servers are considered (`stream` and `mail` get the TLS checks only).
 - The key check reads the real file mode of the path on this machine; for a copied config the file is usually absent, hence `--no-stat`.
 - It cannot see live traffic, WAF rules, or settings made outside the files you give it.
+
+---
+
+**More tools by [TPOALOS](https://github.com/TPOALOS):** [cookiecheck](https://github.com/TPOALOS/cookiecheck) · [mailauth-lint](https://github.com/TPOALOS/mailauth-lint) · [dmarc-report](https://github.com/TPOALOS/dmarc-report) · [all 51 tools](https://tpoalos.github.io)
