@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nginxcheck"
+version = "1.0.0"
+description = "Lint nginx config for security mistakes: TLS protocols and ciphers, missing headers, alias traversal, proxy_pass SSRF smells, autoindex. Read-only. No dependencies."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "TPOALOS"}]
+keywords = ["nginx", "security", "tls", "hardening", "linter", "devops"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Homepage = "https://github.com/TPOALOS/nginxcheck"
+
+[project.scripts]
+nginxcheck = "nginxcheck:main"
+
+[tool.setuptools]
+py-modules = ["nginxcheck"]
